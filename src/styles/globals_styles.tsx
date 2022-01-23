@@ -14,7 +14,7 @@ html{
 body {
     font-family: 'Manrope', sans-serif;
     font-size: 1.6rem;
-    background-color:#E5E5E5;
+    background-color:#FFFFFF;
 }
 `;
 
