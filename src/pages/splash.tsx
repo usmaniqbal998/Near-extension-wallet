@@ -9,7 +9,6 @@ import { device } from '../styles/devices';
 const SplashScreen = () => {
   const history = useHistory();
   useEffect(() => {
-    //move splash after 2 secoands
     setTimeout(() => {
       history.push('/login');
     }, 1500);
