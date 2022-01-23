@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CloseIco = (props: { className?: string }) => (
+const CloseIco = (props: { className?: string; onClick?: () => void }) => (
   <svg
     width={25}
     height={24}

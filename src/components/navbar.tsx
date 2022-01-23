@@ -5,16 +5,18 @@ import CloseIco from '../assets/close_ico';
 interface Props {
   children: React.ReactChild | React.ReactChild[];
   closeAction?: Boolean;
+  onClosePressed?: () => void;
 }
 
 const Navbar: React.FunctionComponent<Props> = ({
   children,
   closeAction,
+  onClosePressed,
 }: Props) => {
   return (
     <NavContainer>
       {children}
-      {closeAction && <CloseIcon />}
+      {closeAction && <CloseIcon onClick={onClosePressed} />}
     </NavContainer>
   );
 };
@@ -26,7 +28,7 @@ const NavContainer = styled.div`
   justify-content: center;
   align-items: center;
   position: relative;
-  min-height: 5.5rem;
+  min-height: 6rem;
 `;
 
 const CloseIcon = styled(CloseIco)`

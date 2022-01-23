@@ -5,21 +5,39 @@ interface Props {
   value: string;
   className?: string;
   placeholderText: string;
+  label?: string;
 }
 
 const Input: React.FunctionComponent<Props> = ({
   value,
   className,
   placeholderText,
+  label,
 }: Props) => {
   return (
-    <InputField
-      placeholder={placeholderText}
-      value={value}
-      className={className}
-    />
+    <InputContainer>
+      {label && <Label htmlFor={label}>{label}</Label>}
+      <InputField
+        name={label || ''}
+        placeholder={placeholderText}
+        value={value}
+        className={className}
+      />
+    </InputContainer>
   );
 };
+
+const InputContainer = styled.div`
+  margin-bottom: 1.6rem;
+`;
+
+const Label = styled.label`
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+  color: #6f6e73;
+  margin-bottom: 1rem;
+  display: block;
+`;
 
 const InputField = styled.input`
   outline: none;
