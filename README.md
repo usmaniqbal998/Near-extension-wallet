@@ -9,6 +9,11 @@ This is a an upwrok challenge project using Following tech stack
 5.  [msw](https://mswjs.io/) for mock data and mock network calls
 6.  webpack and babel for project bundling
 
+## Caution
+
+open this application only in mobile view as its only written with mobile breakpoints
+you might see descripencies on screens above 500px min-width
+
 ## Mock Api Routes
 
 1.  /verifyotp (POST)

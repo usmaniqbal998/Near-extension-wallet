@@ -6,15 +6,17 @@ interface Props {
   children: React.ReactChild | React.ReactChild[];
   closeAction?: Boolean;
   onClosePressed?: () => void;
+  className?: string;
 }
 
 const Navbar: React.FunctionComponent<Props> = ({
   children,
   closeAction,
   onClosePressed,
+  className,
 }: Props) => {
   return (
-    <NavContainer>
+    <NavContainer className={className}>
       {children}
       {closeAction && <CloseIcon onClick={onClosePressed} />}
     </NavContainer>

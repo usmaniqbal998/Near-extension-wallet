@@ -35,6 +35,7 @@ const Input: React.FunctionComponent<Props> = ({
 
 const InputContainer = styled.div`
   margin-bottom: 1.6rem;
+  width: 100%;
 `;
 
 const Label = styled.label`

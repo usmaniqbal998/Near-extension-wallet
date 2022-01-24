@@ -28,5 +28,16 @@ export const handlers = [
     );
   }),
   // Handles a GET /user request
-  rest.get('/user', null),
+  rest.get('/getuser', (req, res, ctx) => {
+    const user = JSON.parse(localStorage.getItem('user'));
+
+    return res(
+      ctx.status(200),
+      ctx.json({
+        data: {
+          user: user,
+        },
+      })
+    );
+  }),
 ];
