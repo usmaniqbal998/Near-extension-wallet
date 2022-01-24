@@ -6,6 +6,8 @@ interface Props {
   className?: string;
   placeholderText: string;
   label?: string;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  type?: string;
 }
 
 const Input: React.FunctionComponent<Props> = ({
@@ -13,6 +15,8 @@ const Input: React.FunctionComponent<Props> = ({
   className,
   placeholderText,
   label,
+  onChange,
+  type,
 }: Props) => {
   return (
     <InputContainer>
@@ -22,6 +26,8 @@ const Input: React.FunctionComponent<Props> = ({
         placeholder={placeholderText}
         value={value}
         className={className}
+        onChange={onChange}
+        type={type}
       />
     </InputContainer>
   );

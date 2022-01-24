@@ -16,6 +16,12 @@ body {
     font-size: 1.6rem;
     background-color:#FFFFFF;
 }
+
+a{
+  color: #587BE0;
+  text-decoration: none;
+
+}
 `;
 
 export default GlobalStyles;

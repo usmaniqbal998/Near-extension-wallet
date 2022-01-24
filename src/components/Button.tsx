@@ -6,9 +6,9 @@ import { buttontypes } from '../common/types';
 interface Props {
   variant: buttontypes;
   label: string;
-
   onClick: React.MouseEventHandler<HTMLButtonElement>;
   className?: string;
+  disabled?: boolean;
 }
 
 interface ButtonProps {
@@ -20,9 +20,15 @@ const Button: React.FunctionComponent<Props> = ({
   label,
   onClick,
   className,
+  disabled,
 }: Props) => {
   return (
-    <Btn onClick={onClick} btnType={variant} className={className}>
+    <Btn
+      onClick={onClick}
+      btnType={variant}
+      className={className}
+      disabled={disabled}
+    >
       <span>{label}</span>
       <NextIco />
     </Btn>
@@ -36,13 +42,13 @@ const Btn = styled.button<ButtonProps>(props => {
     align-items: center;
     justify-content: space-between;
     padding: 0.8rem 1rem;
-    background: #885fff;
     border-radius: 1rem;
     font-size: 1.6rem;
     line-height: 22px;
     color: #FFFFFF;
     min-width:10.15rem;
     letter-spacing: -0.408px;
+    background:${props.disabled ? '#BEBEC2 !important' : '#885fff'}
   `;
   switch (props.btnType) {
     case 'primary':

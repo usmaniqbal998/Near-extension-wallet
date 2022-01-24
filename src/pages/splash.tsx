@@ -10,7 +10,7 @@ const SplashScreen = () => {
   const history = useHistory();
   useEffect(() => {
     setTimeout(() => {
-      history.push('/login');
+      history.push('/register');
     }, 1500);
   });
 

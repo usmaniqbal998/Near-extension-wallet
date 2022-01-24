@@ -28,7 +28,7 @@ const NavContainer = styled.div`
   justify-content: center;
   align-items: center;
   position: relative;
-  min-height: 6rem;
+  height: 6rem;
 `;
 
 const CloseIcon = styled(CloseIco)`
